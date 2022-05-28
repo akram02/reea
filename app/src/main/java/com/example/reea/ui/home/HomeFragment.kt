@@ -1,11 +1,12 @@
 package com.example.reea.ui.home
 
-import android.app.Application
+import android.content.Context
 import android.os.Bundle
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
 import androidx.fragment.app.Fragment
+import androidx.fragment.app.viewModels
 import androidx.navigation.fragment.findNavController
 import com.example.reea.databinding.FragmentHomeBinding
 import com.example.reea.utils.LanguageUtils
@@ -18,10 +19,9 @@ import javax.inject.Inject
 @AndroidEntryPoint
 class HomeFragment : Fragment() {
     @Inject
-    lateinit var preference: LanguageUtils
+    lateinit var languageUtils: LanguageUtils
 
-    @Inject
-    lateinit var application: Application
+    private val viewModel by viewModels<MovieViewModel>()
 
     override fun onCreateView(
         inflater: LayoutInflater, container: ViewGroup?,
@@ -35,8 +35,12 @@ class HomeFragment : Fragment() {
         }
 
         binding.languageBtn.setOnClickListener {
-            preference.toggleLanguage(requireContext())
+            languageUtils.toggleLanguage(requireContext())
             requireActivity().recreate()
+        }
+        viewModel.getMovieList()
+        viewModel.movieListLiveData.observe(viewLifecycleOwner) {
+            println(it)
         }
         return binding.root
     }
