@@ -1,4 +1,6 @@
 <resources>
-    <string name="app_name">reea</string>
-    <string name="title_activity_maps">MapsActivity</string>
+    <string name="app_name" translatable="false">reea</string>
+    <string name="title_activity_maps" translatable="false">MapsActivity</string>
+    <string name="maps_btn">Goto Maps</string>
+    <string name="change_language_btn">Change Language</string>
 </resources>
