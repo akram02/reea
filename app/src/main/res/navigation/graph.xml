@@ -11,11 +11,23 @@
         tools:layout="@layout/fragment_home">
         <action
             android:id="@+id/homeFragmentToMapsFragment"
-            app:destination="@id/mapsFragment"/>
+            app:destination="@id/mapsFragment" />
+        <action
+            android:id="@+id/homeFragmentToMovieDetails"
+            app:destination="@id/movieDetailsFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/movieDetailsFragment"
+        android:name="com.example.reea.ui.movies.MovieDetailsFragment"
+        android:label="Movie Details Fragment"
+        tools:layout="@layout/fragment_movie_details">
+        <argument
+            android:name="movie"
+            app:argType="com.example.reea.vm.MovieVM" />
     </fragment>
     <fragment
         android:id="@+id/mapsFragment"
         android:name="com.example.reea.MapsFragment"
         android:label="Maps Fragment"
-        tools:layout="@layout/fragment_maps"/>
+        tools:layout="@layout/fragment_maps" />
 </navigation>

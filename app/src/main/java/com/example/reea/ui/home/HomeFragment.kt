@@ -11,6 +11,7 @@ import androidx.recyclerview.widget.LinearLayoutManager
 import com.example.reea.base.ClickListener
 import com.example.reea.databinding.FragmentHomeBinding
 import com.example.reea.utils.LanguageUtils
+import com.example.reea.vm.MovieVM
 import dagger.hilt.android.AndroidEntryPoint
 import javax.inject.Inject
 
@@ -52,5 +53,8 @@ class HomeFragment : Fragment(), ClickListener {
     }
 
     override fun onItemClick(item: View, any: Any) {
+        findNavController().navigate(
+            HomeFragmentDirections.homeFragmentToMovieDetails(any as MovieVM)
+        )
     }
 }
