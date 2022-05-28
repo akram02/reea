@@ -27,6 +27,7 @@ class MovieDetailsFragment : Fragment() {
         binding.lifecycleOwner = this
         binding.viewModel = viewModel
         val movie: MovieVM = MovieDetailsFragmentArgs.fromBundle(requireArguments()).movie
+        requireActivity().title = movie.title
         viewModel.getMovieDetails(movie.id ?: 0)
         return binding.root
     }

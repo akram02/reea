@@ -8,6 +8,7 @@ import androidx.fragment.app.Fragment
 import androidx.fragment.app.viewModels
 import androidx.navigation.fragment.findNavController
 import androidx.recyclerview.widget.LinearLayoutManager
+import com.example.reea.R
 import com.example.reea.base.ClickListener
 import com.example.reea.databinding.FragmentHomeBinding
 import com.example.reea.network.MovieViewModel
@@ -42,6 +43,7 @@ class HomeFragment : Fragment(), ClickListener {
             languageUtils.toggleLanguage(requireContext())
             requireActivity().recreate()
         }
+        requireActivity().title = getString(R.string.home)
         viewModel.getMovieList()
         val movieAdapter = MovieAdapter()
         binding.movieList.adapter = movieAdapter
