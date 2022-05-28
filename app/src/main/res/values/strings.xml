@@ -3,4 +3,8 @@
     <string name="title_activity_maps" translatable="false">MapsActivity</string>
     <string name="maps_btn">Goto Maps</string>
     <string name="change_language_btn">Change Language</string>
+    <string name="poster">Poster</string>
+    <string name="title">Title</string>
+    <string name="date">Date</string>
+    <string name="vote">Vote</string>
 </resources>

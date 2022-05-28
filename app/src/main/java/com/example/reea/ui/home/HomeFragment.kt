@@ -1,6 +1,5 @@
 package com.example.reea.ui.home
 
-import android.content.Context
 import android.os.Bundle
 import android.view.LayoutInflater
 import android.view.View
@@ -8,16 +7,19 @@ import android.view.ViewGroup
 import androidx.fragment.app.Fragment
 import androidx.fragment.app.viewModels
 import androidx.navigation.fragment.findNavController
+import androidx.recyclerview.widget.LinearLayoutManager
+import com.example.reea.base.ClickListener
 import com.example.reea.databinding.FragmentHomeBinding
 import com.example.reea.utils.LanguageUtils
 import dagger.hilt.android.AndroidEntryPoint
 import javax.inject.Inject
 
 /**
- * App starts with this fragment
+ * App starts with this fragment.
+ * Contains movie list with two buttons(go to map, change language)
  */
 @AndroidEntryPoint
-class HomeFragment : Fragment() {
+class HomeFragment : Fragment(), ClickListener {
     @Inject
     lateinit var languageUtils: LanguageUtils
 
@@ -39,9 +41,16 @@ class HomeFragment : Fragment() {
             requireActivity().recreate()
         }
         viewModel.getMovieList()
+        val movieAdapter = MovieAdapter()
+        binding.movieList.adapter = movieAdapter
+        binding.movieList.layoutManager = LinearLayoutManager(requireContext())
+        movieAdapter.setItemClickListener(this)
         viewModel.movieListLiveData.observe(viewLifecycleOwner) {
-            println(it)
+            movieAdapter.setItemList(it.results!!.toMutableList())
         }
         return binding.root
+    }
+
+    override fun onItemClick(item: View, any: Any) {
     }
 }

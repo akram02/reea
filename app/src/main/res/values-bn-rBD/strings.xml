@@ -2,4 +2,8 @@
 <resources>
     <string name="maps_btn">ম্যাপে যান</string>
     <string name="change_language_btn">ভাষা পরিবর্তন করুন</string>
+    <string name="poster">Poster</string>
+    <string name="title">Title</string>
+    <string name="date">Date</string>
+    <string name="vote">Vote</string>
 </resources>
