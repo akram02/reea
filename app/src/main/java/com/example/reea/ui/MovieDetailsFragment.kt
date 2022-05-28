@@ -1,4 +1,4 @@
-package com.example.reea.ui.movies
+package com.example.reea.ui
 
 import android.os.Bundle
 import android.view.LayoutInflater

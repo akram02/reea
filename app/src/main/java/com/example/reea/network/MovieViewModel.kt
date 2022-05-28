@@ -1,4 +1,4 @@
-package com.example.reea.ui.home
+package com.example.reea.network
 
 import androidx.lifecycle.MutableLiveData
 import com.example.reea.base.BaseViewModel

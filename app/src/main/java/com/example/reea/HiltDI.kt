@@ -1,8 +1,8 @@
-package com.example.reea.di
+package com.example.reea
 
 import android.app.Application
-import com.example.reea.config.Config.BASE_URL
-import com.example.reea.config.Config.REQUEST_TIMEOUT
+import com.example.reea.Config.BASE_URL
+import com.example.reea.Config.REQUEST_TIMEOUT
 import com.example.reea.network.RestApi
 import com.example.reea.utils.PreferenceUtils
 import com.google.gson.Gson
@@ -25,7 +25,7 @@ import java.util.concurrent.TimeUnit
 
 @Module
 @InstallIn(SingletonComponent::class)
-class Hilt {
+class HiltDI {
 
     @Provides
     fun providePreference(application: Application) = PreferenceUtils(application)

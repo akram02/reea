@@ -1,4 +1,4 @@
-package com.example.reea.ui.home
+package com.example.reea.ui
 
 import android.os.Bundle
 import android.view.LayoutInflater
@@ -10,6 +10,7 @@ import androidx.navigation.fragment.findNavController
 import androidx.recyclerview.widget.LinearLayoutManager
 import com.example.reea.base.ClickListener
 import com.example.reea.databinding.FragmentHomeBinding
+import com.example.reea.network.MovieViewModel
 import com.example.reea.utils.LanguageUtils
 import com.example.reea.vm.MovieVM
 import dagger.hilt.android.AndroidEntryPoint

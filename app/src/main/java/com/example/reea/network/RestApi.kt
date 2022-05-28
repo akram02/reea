@@ -1,6 +1,6 @@
 package com.example.reea.network
 
-import com.example.reea.config.Config
+import com.example.reea.Config
 import com.example.reea.vm.MovieDetailsVM
 import com.example.reea.vm.MovieListVM
 import retrofit2.http.GET

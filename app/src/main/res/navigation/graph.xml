@@ -6,7 +6,7 @@
     app:startDestination="@id/homeFragment">
     <fragment
         android:id="@+id/homeFragment"
-        android:name="com.example.reea.ui.home.HomeFragment"
+        android:name="com.example.reea.ui.HomeFragment"
         android:label="Home Fragment"
         tools:layout="@layout/fragment_home">
         <action
@@ -18,7 +18,7 @@
     </fragment>
     <fragment
         android:id="@+id/movieDetailsFragment"
-        android:name="com.example.reea.ui.movies.MovieDetailsFragment"
+        android:name="com.example.reea.ui.MovieDetailsFragment"
         android:label="Movie Details Fragment"
         tools:layout="@layout/fragment_movie_details">
         <argument
@@ -27,7 +27,7 @@
     </fragment>
     <fragment
         android:id="@+id/mapsFragment"
-        android:name="com.example.reea.MapsFragment"
+        android:name="com.example.reea.ui.MapsFragment"
         android:label="Maps Fragment"
         tools:layout="@layout/fragment_maps" />
 </navigation>

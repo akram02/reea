@@ -1,4 +1,4 @@
-package com.example.reea.ui.home
+package com.example.reea.ui
 
 import android.annotation.SuppressLint
 import android.view.View
@@ -7,7 +7,7 @@ import android.widget.TextView
 import com.bumptech.glide.Glide
 import com.example.reea.R
 import com.example.reea.base.BaseAdapter
-import com.example.reea.config.Config
+import com.example.reea.Config
 import com.example.reea.vm.MovieVM
 
 import javax.inject.Inject

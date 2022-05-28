@@ -1,4 +1,4 @@
-package com.example.reea
+package com.example.reea.ui
 
 import android.Manifest
 import android.os.Bundle
@@ -6,6 +6,7 @@ import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
 import androidx.fragment.app.Fragment
+import com.example.reea.R
 import com.example.reea.utils.startLocationUpdate
 import com.fondesa.kpermissions.allGranted
 import com.fondesa.kpermissions.extension.permissionsBuilder

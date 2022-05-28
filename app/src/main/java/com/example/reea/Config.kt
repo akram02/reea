@@ -1,4 +1,4 @@
-package com.example.reea.config
+package com.example.reea
 
 object Config {
     val REQUEST_TIMEOUT = 60L
