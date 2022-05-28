@@ -9,5 +9,13 @@
         android:name="com.example.reea.ui.home.HomeFragment"
         android:label="Home Fragment"
         tools:layout="@layout/fragment_home">
+        <action
+            android:id="@+id/homeFragmentToMapsFragment"
+            app:destination="@id/mapsFragment"/>
     </fragment>
+    <fragment
+        android:id="@+id/mapsFragment"
+        android:name="com.example.reea.MapsFragment"
+        android:label="Maps Fragment"
+        tools:layout="@layout/fragment_maps"/>
 </navigation>
