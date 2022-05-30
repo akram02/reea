@@ -1,5 +1,7 @@
 package com.example.reea.network
 
+import androidx.paging.CombinedLoadStates
+import androidx.paging.LoadState
 import com.google.gson.JsonIOException
 import retrofit2.HttpException
 import java.io.IOException
@@ -36,5 +38,16 @@ object NetworkError {
 
     private fun getErrorCode(throwable: Throwable): Int {
         return (throwable as HttpException).code()
+    }
+
+    fun getErrorMessage(loadState: CombinedLoadStates): String? {
+        val error = when {
+            loadState.append is LoadState.Error -> loadState.append
+            loadState.prepend is LoadState.Error -> loadState.prepend
+            loadState.refresh is LoadState.Error -> loadState.refresh
+            else -> null
+        }
+        return if (error==null) null
+        else (getResponseMessage((error as LoadState.Error).error))
     }
 }
