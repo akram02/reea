@@ -4,8 +4,10 @@ import android.os.Bundle
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
+import androidx.appcompat.app.AppCompatActivity
 import androidx.fragment.app.Fragment
 import androidx.fragment.app.viewModels
+import com.example.reea.R
 import com.example.reea.databinding.FragmentMovieDetailsBinding
 import com.example.reea.network.MovieViewModel
 import com.example.reea.vm.MovieVM
@@ -27,7 +29,7 @@ class MovieDetailsFragment : Fragment() {
         binding.lifecycleOwner = this
         binding.viewModel = viewModel
         val movie: MovieVM = MovieDetailsFragmentArgs.fromBundle(requireArguments()).movie
-        requireActivity().title = movie.title
+        (requireActivity() as AppCompatActivity).supportActionBar?.title = movie.title ?: getString(R.string.movie_details_fragment)
         viewModel.getMovieDetails(movie.id ?: 0)
         return binding.root
     }

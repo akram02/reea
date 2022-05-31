@@ -7,7 +7,7 @@
     <fragment
         android:id="@+id/homeFragment"
         android:name="com.example.reea.ui.HomeFragment"
-        android:label="Home Fragment"
+        android:label="@string/home_fragment"
         tools:layout="@layout/fragment_home">
         <action
             android:id="@+id/homeFragmentToMapsFragment"
@@ -19,7 +19,7 @@
     <fragment
         android:id="@+id/movieDetailsFragment"
         android:name="com.example.reea.ui.MovieDetailsFragment"
-        android:label="Movie Details Fragment"
+        android:label="@string/movie_details_fragment"
         tools:layout="@layout/fragment_movie_details">
         <argument
             android:name="movie"
@@ -28,6 +28,6 @@
     <fragment
         android:id="@+id/mapsFragment"
         android:name="com.example.reea.ui.MapsFragment"
-        android:label="Maps Fragment"
+        android:label="@string/maps_fragment"
         tools:layout="@layout/fragment_maps" />
 </navigation>
